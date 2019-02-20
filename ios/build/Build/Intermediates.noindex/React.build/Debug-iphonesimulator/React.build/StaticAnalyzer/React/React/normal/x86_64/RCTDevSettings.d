@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Modules/RCTDevSettings.mm \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Modules/RCTDevSettings.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Modules/RCTJSCSamplingProfiler.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/DevSupport/RCTPackagerClient.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/DevSupport/RCTPackagerConnection.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/DevSupport/RCTInspectorDevServerHelper.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Inspector/RCTInspectorPackagerConnection.h

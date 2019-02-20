@@ -1,0 +1,19 @@
+dependencies: \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Views/SafeAreaView/RCTSafeAreaShadowView.m \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Views/SafeAreaView/RCTSafeAreaShadowView.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Views/RCTShadowView.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Views/RCTLayout.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTRootView.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native/React/Views/SafeAreaView/RCTSafeAreaViewLocalData.h

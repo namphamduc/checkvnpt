@@ -1,0 +1,6 @@
+dependencies: \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-config/ios/ReactNativeConfig/ReactNativeConfig.m \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-config/ios/ReactNativeConfig/ReactNativeConfig.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/GeneratedDotEnv.m

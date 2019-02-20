@@ -1,0 +1,48 @@
+{
+  "name": "DemoAndroidProject",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.3.1",
+    "@types/react-navigation": "^3.0.1",
+    "@types/react-redux": "^7.0.0",
+    "react": "16.6.3",
+    "react-native": "0.57.8",
+    "react-native-camera": "^1.8.0",
+    "react-native-checkbox-form": "^1.1.5",
+    "react-native-config": "^0.11.7",
+    "react-native-elements": "^0.19.1",
+    "react-native-gesture-handler": "^1.0.12",
+    "react-native-paper": "^2.4.0",
+    "react-native-qrcode-scanner": "^1.1.2",
+    "react-native-sqlite-storage": "^3.3.9",
+    "react-native-vector-icons": "^6.1.0",
+    "react-navigation": "^3.0.9",
+    "react-navigation-material-bottom-tabs": "^1.0.0",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-saga": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.13",
+    "@types/react": "^16.7.20",
+    "@types/react-native": "^0.57.29",
+    "@types/react-native-sqlite-storage": "^3.3.1",
+    "@types/react-navigation": "^2.13.7",
+    "@types/react-test-renderer": "^16.0.3",
+    "babel-jest": "23.6.0",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-native-typescript-transformer": "^1.2.11",
+    "react-test-renderer": "16.6.3",
+    "typescript": "^2.9.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

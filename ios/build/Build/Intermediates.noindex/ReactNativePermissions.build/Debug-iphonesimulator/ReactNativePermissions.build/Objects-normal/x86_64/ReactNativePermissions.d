@@ -1,0 +1,34 @@
+dependencies: \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-permissions/ios/ReactNativePermissions.m \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-permissions/ios/ReactNativePermissions.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTEventDispatcher.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-permissions/ios/Permissions/RNPLocation.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-permissions/ios/RCTConvert+RNPStatus.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-permissions/ios/Permissions/RNPBluetooth.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-permissions/ios/Permissions/RNPNotification.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-permissions/ios/Permissions/RNPAudioVideo.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-permissions/ios/Permissions/RNPEvent.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-permissions/ios/Permissions/RNPPhoto.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-permissions/ios/Permissions/RNPContacts.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-permissions/ios/Permissions/RNPBackgroundRefresh.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-permissions/ios/Permissions/RNPSpeechRecognition.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-permissions/ios/Permissions/RNPMediaLibrary.h \
+  /Users/phamducnam/Documents/Sample/RN/DemoAndroidProject/node_modules/react-native-permissions/ios/Permissions/RNPMotion.h
