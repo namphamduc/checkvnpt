@@ -1,0 +1,74 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# expo
+.expo/
+#
+.vscode/
+
+# dependencies
+/node_modules
+
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+android/app/build
+android/.gradle
+ios/build
+/build
+.idea*
+*.iml
+ios/Pods
+.DS_Store*
+android/build
+android/.idea
+android/app/src/main/assets/crashlytics-build.properties
+android/app/src/main/res/values/com_crashlytics_export_strings.xml
+yarn.lock
+ios/Podfile.lock
+android/local.properties
+
+*/fastlane/report.xml
+*/fastlane/Preview.html
+*/fastlane/screenshots
+
+# Bundle artifact
+*.jsbundle
+package-lock.json
+
+
+#For iOS
+#For iOS
+# Xcode
+!**/*.xcodeproj
+!**/*.pbxproj
+!**/*.xcworkspacedata
+!**/*.xcsettings
+!**/*.xcscheme
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.xcuserstate
+project.xcworkspace
+
+# OS X
+.DS_Store
+
+# Root dir shouldn't have Xcode project
+/*.xcodeproj
+
+# ReactCommon subdir shouldn't have Xcode project
+/ReactCommon/**/*.xcodeproj
