@@ -1,36 +1,29 @@
-import {LoginType} from '../types'
+import {InfoUserType} from "../types";
 
 const initState = {
+    token: '',
     loading: false,
-    data: '',
-    email: '',
-    password: '',
-    message: '',
     error: false,
     user: '',
-    status :''
 }
 export default function (state = initState, action: any) {
     switch (action.type) {
-        case LoginType.REQUEST_LOGIN :
+        case InfoUserType.REQUEST_INFO_USER :
             return Object.assign({}, state, {
                 loading: true,
-                email: action.email,
-                password: action.password,
+                token :action.token
             })
-        case  LoginType.REQUEST_LOGIN_SUCCESS :
+        case  InfoUserType.REQUEST_INFO_USER_SUCCESS :
             return Object.assign({}, state, {
                 loading: false,
                 error: false,
                 user: action.user,
-                status : action.status
             })
-        case LoginType.REQUEST_LOGIN_FAILED :
+        case InfoUserType.REQUEST_INFO_USER_FAILED :
             return Object.assign({}, state, {
                 loading: false,
                 message: action.message,
                 error: true,
-                status : action.status
             })
         default :
             return state

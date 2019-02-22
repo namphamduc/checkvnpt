@@ -15,7 +15,6 @@ import {
     createAppContainer,
     createStackNavigator
 } from "react-navigation";
-import ScanScreen from "./src/screens/ScanScreen";
 import HistoryScreen from "./src/screens/HistoryScreen";
 import MenuScreen from "./src/screens/MenuScreen";
 import RuleScreen from "./src/screens/RuleScreen";
@@ -31,10 +30,11 @@ import HistoryContainer from "./src/containers/HistoryContainer";
 import {database} from "./src/database/Database";
 import ScanQRContainer from "./src/containers/ScanQRContainer";
 import MenuContainer from "./src/containers/MenuContainer";
+import ScanContainer from "./src/containers/ScanContainer";
 
 const ScanStack = createStackNavigator(
     {
-        [ScanRoute.SCAN]: {screen: ScanScreen},
+        [ScanRoute.SCAN]: {screen: ScanContainer},
         [ScanRoute.SCAN_QR]: {screen: ScanQRContainer},
         [ScanRoute.WEB_VIEW]: {screen: WebViewBase}
     },

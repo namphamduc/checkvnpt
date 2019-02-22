@@ -51,9 +51,21 @@ export default class LoginScreen2 extends Component<Props, State> {
     };
 
     _pressLogin = () => {
-        console.log("---------- login" + JSON.stringify(this.state));
-        this.props.requestLogin(this.state.userName, this.state.pass, this.state.rememberMe,)
+        this.props.requestLogin(this.state.userName, this.state.pass, this.state.rememberMe)
+        // this.props.requestLogin('doducanh88@gmail.com', 'QuantriDN!00', this.state.rememberMe,)
     };
+
+    componentWillReceiveProps(nextProps: any, nextContext: any): void {
+        const {status, message} = nextProps;
+        if (status == 'LOGIN_SUCCESS') {
+            this.props.navigation.goBack();
+            return
+        }
+        if (status == 'LOGIN_FAIL') {
+            let mes = message ? message : 'Lỗi'
+            console.log('----' + mes + 'xxxx mess' + message)
+        }
+    }
 
     constructor(props: any) {
         super(props);
@@ -233,84 +245,86 @@ export default class LoginScreen2 extends Component<Props, State> {
         );
     }
 }
-const styles = StyleSheet.create({
-    // zeroContainer: {
-    //   height: 0,
-    //   flex: 0,
-    // },
 
-    // cameraContainer: {
-    //   height: Dimensions.get('window').height,
-    // },
-    titleToolbar: {
-        marginLeft: 16,
-        color: "white",
-        fontWeight: "normal",
-        fontSize: 18
-    },
-    toolbar: {
-        width: "100%",
-        height: 70,
-        flexDirection: "row",
-        alignItems: "center"
-    },
-    container: {
-        flex: 1,
-        backgroundColor: "white",
-        flexDirection: "column"
-    },
-    centerText: {
-        flex: 1,
-        fontSize: 18,
-        padding: 32,
-        color: "#777"
-    },
-    textBold: {
-        fontWeight: "500",
-        color: "#000"
-    },
-    buttonText: {
-        fontSize: 21,
-        color: "rgb(0,122,255)"
-    },
-    buttonTouchable: {
-        padding: 16
-    },
-    logo: {
-        width: 200,
-        height: 56,
-        marginTop: 10,
-        marginBottom: 10
-    },
-    view1: {
-        width: "100%",
-        height: 7,
-        backgroundColor: "#4379d2"
-    },
-    view2: {
-        height: 0.5,
-        marginLeft: 50,
-        marginRight: 50,
-        backgroundColor: "#FFFFFF"
-    },
-    buttonContainer: {
-        width: 300,
-        marginTop: 30,
-        backgroundColor: "#FFF",
-        paddingVertical: 15,
-        alignSelf: "center",
-        justifyContent: "center"
-    },
-    buttonText: {
-        textAlign: "center",
-        color: "#0f365f",
-        fontWeight: "normal",
-        fontSize: 18
-    },
-    checkboxText: {
-        textAlign: "center",
-        color: "#FFF",
-        fontWeight: "normal",
-        fontSize: 14
-    }
-});
+const
+    styles = StyleSheet.create({
+        // zeroContainer: {
+        //   height: 0,
+        //   flex: 0,
+        // },
+
+        // cameraContainer: {
+        //   height: Dimensions.get('window').height,
+        // },
+        titleToolbar: {
+            marginLeft: 16,
+            color: "white",
+            fontWeight: "normal",
+            fontSize: 18
+        },
+        toolbar: {
+            width: "100%",
+            height: 70,
+            flexDirection: "row",
+            alignItems: "center"
+        },
+        container: {
+            flex: 1,
+            backgroundColor: "white",
+            flexDirection: "column"
+        },
+        centerText: {
+            flex: 1,
+            fontSize: 18,
+            padding: 32,
+            color: "#777"
+        },
+        textBold: {
+            fontWeight: "500",
+            color: "#000"
+        },
+        buttonText: {
+            fontSize: 21,
+            color: "rgb(0,122,255)"
+        },
+        buttonTouchable: {
+            padding: 16
+        },
+        logo: {
+            width: 200,
+            height: 56,
+            marginTop: 10,
+            marginBottom: 10
+        },
+        view1: {
+            width: "100%",
+            height: 7,
+            backgroundColor: "#4379d2"
+        },
+        view2: {
+            height: 0.5,
+            marginLeft: 50,
+            marginRight: 50,
+            backgroundColor: "#FFFFFF"
+        },
+        buttonContainer: {
+            width: 300,
+            marginTop: 30,
+            backgroundColor: "#FFF",
+            paddingVertical: 15,
+            alignSelf: "center",
+            justifyContent: "center"
+        },
+        buttonText: {
+            textAlign: "center",
+            color: "#0f365f",
+            fontWeight: "normal",
+            fontSize: 18
+        },
+        checkboxText: {
+            textAlign: "center",
+            color: "#FFF",
+            fontWeight: "normal",
+            fontSize: 14
+        }
+    });

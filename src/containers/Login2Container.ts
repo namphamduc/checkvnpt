@@ -7,11 +7,12 @@ const mapStateToProps = (state: any) => {
         {
             loading: state.login.loading,
             message: state.login.message,
-            error: state.login.error
+            error: state.login.error,
+            status: state.login.status,
         })
 }
 const mapDispatchToProps = (dispatch: any) => ({
-    requestLogin: (password: any, email: any, rememberMe: boolean) => dispatch(requestLogin(password, email,rememberMe))
+    requestLogin: (password: any, email: any, rememberMe: boolean) => dispatch(requestLogin(password, email, rememberMe))
 })
 export default connect(
     mapStateToProps,

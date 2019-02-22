@@ -9,6 +9,7 @@ import {
     TouchableWithoutFeedback,
     StatusBar, TouchableOpacity, ScrollView
 } from "react-native";
+import {getInfoUser} from "../utils/AsyncStorage";
 
 interface Props {
     navigation: any,
@@ -256,6 +257,7 @@ export default class MEnuSCreen extends Component<Props, State> {
 
     renderInfoUser = (isLogin: boolean) => {
         let user = this.props.user
+        let image = user.use_thumbnail ? {uri: user.use_thumbnail} : require("../images/ic_default_user.png")
         return (isLogin && user ?
             <View style={{
                 marginTop: 15,
@@ -265,45 +267,43 @@ export default class MEnuSCreen extends Component<Props, State> {
                 justifyContent: "space-between",
             }}>
                 <View style={{
+                    marginStart: 5,
                     flex: 1,
                     flexDirection: "row",
                     justifyContent: 'flex-start',
                     alignItems: 'stretch',
                     height: '100%',
                 }}>
+                    <Image
+                        style={{
+                            borderRadius: 50,
+                            alignSelf: 'center',
+                            height: 100,
+                            width: 100
+                        }}
+                        source={image}
+                    />
                     <View style={{
                         flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        marginStart: 10,
-                        marginEnd: 10,
+                        flex: 1,
+                        position: 'absolute',
+                        bottom: 15,
+                        left: 105,
+                        marginEnd: 15,
                     }}>
-                        <Image
-                            style={{
-                                padding: 10,
-                                marginStart: 10,
-                                borderRadius: 50,
-                                alignSelf: 'center',
-                                height: 100,
-                                width: 100
-                            }}
-                            source={{uri: user.use_thumbnail}}
-                        />
-                    </View>
-                    <View style={{flexDirection: 'column', flex: 1, marginStart: 10, marginEnd: 15, marginTop: 35}}>
                         <Text numberOfLines={1} ellipsizeMode='tail'
                               style={{
                                   flex: 1,
-                                  fontSize: 23,
+                                  fontSize: 20,
                                   color: 'blue',
                               }}>{user.use_fullname}</Text>
                         <Text numberOfLines={1} ellipsizeMode='tail'
                               style={{
-                                  marginTop: 5,
+                                  marginTop: 2,
                                   flex: 1,
-                                  fontSize: 16,
+                                  fontSize: 14,
                                   color: '#000000',
-                              }}>{user.use_fullname}</Text>
+                              }}>{user.use_email}</Text>
                     </View>
                 </View>
             </View>
