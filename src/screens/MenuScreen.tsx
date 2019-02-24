@@ -32,6 +32,7 @@ export default class MEnuSCreen extends Component<Props, State> {
     //   );
     //   return { tabBarIcon };
     // };
+
     _onPressHome = () => {
         Linking.openURL("http://vnptcheck.vn");
     };
@@ -70,118 +71,119 @@ export default class MEnuSCreen extends Component<Props, State> {
                     />
                     <Text style={[styles.titleToolbar]}>Thông tin chung</Text>
                 </View>
-                <ScrollView>
-                    {this.renderInfoUser(this.props.isLogin)}
-                    {this.renderLine(this.props.isLogin)}
-                    {this.renderItemSell(this.props.isLogin)}
-                    {this.renderLine(this.props.isLogin)}
-                    <View style={[styles.viewLine]}/>
-                    <TouchableWithoutFeedback onPress={this._onPressHome}>
-                        <View style={[styles.itemView]}>
-                            <View style={[styles.leftContainer]}>
-                                <Image
-                                    style={{
-                                        marginLeft: 10,
-                                        width: 25,
-                                        height: 25
-                                    }}
-                                    source={require("../images/ic_home.png")}
-                                />
-                                <Text style={styles.itemText}>Trang chủ</Text>
-                            </View>
+                {/*<ScrollView>*/}
+                {this.renderInfoUser(this.props.isLogin)}
+                {this.renderLine(this.props.isLogin)}
+                {this.renderItemSell(this.props.isLogin)}
+                {this.renderLine(this.props.isLogin)}
+                <View style={[styles.viewLine]}/>
+                <TouchableWithoutFeedback onPress={this._onPressHome}>
+                    <View style={[styles.itemView]}>
+                        <View style={[styles.leftContainer]}>
                             <Image
-                                style={styles.rightContainer}
-                                source={require("../images/ic_three_dot.png")}
+                                style={{
+                                    marginLeft: 10,
+                                    width: 25,
+                                    height: 25
+                                }}
+                                source={require("../images/ic_home.png")}
                             />
+                            <Text style={styles.itemText}>Trang chủ</Text>
                         </View>
-                    </TouchableWithoutFeedback>
-                    <View style={[styles.viewLine]}/>
-                    <TouchableWithoutFeedback onPress={this._onPressInfoApp}>
-                        <View style={[styles.itemView]}>
-                            <View style={[styles.leftContainer]}>
-                                <Image
-                                    style={{
-                                        marginLeft: 10,
-                                        width: 25,
-                                        height: 25
-                                    }}
-                                    source={require("../images/ic_setting.png")}
-                                />
-                                <Text style={styles.itemText}>Thông tin ứng dụng</Text>
-                            </View>
+                        <Image
+                            style={styles.rightContainer}
+                            source={require("../images/ic_three_dot.png")}
+                        />
+                    </View>
+                </TouchableWithoutFeedback>
+                <View style={[styles.viewLine]}/>
+                <TouchableWithoutFeedback onPress={this._onPressInfoApp}>
+                    <View style={[styles.itemView]}>
+                        <View style={[styles.leftContainer]}>
                             <Image
-                                style={styles.rightContainer}
-                                source={require("../images/ic_three_dot.png")}
+                                style={{
+                                    marginLeft: 10,
+                                    width: 25,
+                                    height: 25
+                                }}
+                                source={require("../images/ic_setting.png")}
                             />
+                            <Text style={styles.itemText}>Thông tin ứng dụng</Text>
                         </View>
-                    </TouchableWithoutFeedback>
-                    <View style={[styles.viewLine]}/>
-                    <TouchableWithoutFeedback onPress={this._onPressRule}>
-                        <View style={[styles.itemView]}>
-                            <View style={[styles.leftContainer]}>
-                                <Image
-                                    style={{
-                                        marginLeft: 10,
-                                        width: 25,
-                                        height: 25
-                                    }}
-                                    source={require("../images/ic_info.png")}
-                                />
-                                <Text style={styles.itemText}>Điều khoản sử dụng</Text>
-                            </View>
+                        <Image
+                            style={styles.rightContainer}
+                            source={require("../images/ic_three_dot.png")}
+                        />
+                    </View>
+                </TouchableWithoutFeedback>
+                <View style={[styles.viewLine]}/>
+                <TouchableWithoutFeedback onPress={this._onPressRule}>
+                    <View style={[styles.itemView]}>
+                        <View style={[styles.leftContainer]}>
                             <Image
-                                style={styles.rightContainer}
-                                source={require("../images/ic_three_dot.png")}
+                                style={{
+                                    marginLeft: 10,
+                                    width: 25,
+                                    height: 25
+                                }}
+                                source={require("../images/ic_info.png")}
                             />
+                            <Text style={styles.itemText}>Điều khoản sử dụng</Text>
                         </View>
-                    </TouchableWithoutFeedback>
-                    <View style={[styles.viewLine]}/>
-                    <TouchableWithoutFeedback onPress={this._onPressTutorial}>
-                        <View style={[styles.itemView]}>
-                            <View style={[styles.leftContainer]}>
-                                <Image
-                                    style={{
-                                        marginLeft: 10,
-                                        width: 30,
-                                        height: 20
-                                    }}
-                                    source={require("../images/ic_book_3.png")}
-                                />
-                                <Text
-                                    style={{
-                                        color: "black",
-                                        fontSize: 16,
-                                        alignSelf: "center",
-                                        marginLeft: 17
-                                    }}
-                                >
-                                    Hướng dẫn sử dụng
-                                </Text>
-                            </View>
+                        <Image
+                            style={styles.rightContainer}
+                            source={require("../images/ic_three_dot.png")}
+                        />
+                    </View>
+                </TouchableWithoutFeedback>
+                <View style={[styles.viewLine]}/>
+                <TouchableWithoutFeedback onPress={this._onPressTutorial}>
+                    <View style={[styles.itemView]}>
+                        <View style={[styles.leftContainer]}>
                             <Image
-                                style={styles.rightContainer}
-                                source={require("../images/ic_three_dot.png")}
+                                style={{
+                                    marginLeft: 10,
+                                    width: 30,
+                                    height: 20
+                                }}
+                                source={require("../images/ic_book_3.png")}
                             />
+                            <Text
+                                style={{
+                                    color: "black",
+                                    fontSize: 16,
+                                    alignSelf: "center",
+                                    marginLeft: 17
+                                }}
+                            >
+                                Hướng dẫn sử dụng
+                            </Text>
                         </View>
-                    </TouchableWithoutFeedback>
-                    <View style={[styles.viewLine]}/>
-                    {this.renderItemLoginLogOut(this.props.isLogin)}
-                    <View style={[styles.viewLine]}/>
+                        <Image
+                            style={styles.rightContainer}
+                            source={require("../images/ic_three_dot.png")}
+                        />
+                    </View>
+                </TouchableWithoutFeedback>
+                <View style={[styles.viewLine]}/>
+                {this.renderItemLoginLogOut(this.props.isLogin)}
+                <View style={[styles.viewLine]}/>
+                {this.props.isLogin ? null :
                     <Image
                         style={{
                             width: "100%",
                             height: 140,
-                            marginTop: 10
-                            // position: "absolute",
-                            // bottom: 0,
-                            // left: 0,
-                            // right: 0
+                            position: "absolute",
+                            bottom: 0,
+                            left: 0,
+                            right: 0,
                         }}
                         resizeMethod='auto'
                         resizeMode="cover"
                         source={require("../images/bg_menu.png")}
                     />
-                </ScrollView>
+                }
+                {/*</ScrollView>*/}
 
             </SafeAreaView>
         );
@@ -200,7 +202,7 @@ export default class MEnuSCreen extends Component<Props, State> {
                             width: 25,
                             height: 25
                         }}
-                        source={require("../images/ic_carted.png")}
+                        source={require("../images/icon_cart.png")}
                     />
                     <Text style={{
                         color: "blue",
@@ -335,7 +337,6 @@ const styles = StyleSheet.create({
         height: 30
     },
     toolbar: {
-        justifyContent: "center",
         width: "100%",
         height: 70,
         flexDirection: "row",
