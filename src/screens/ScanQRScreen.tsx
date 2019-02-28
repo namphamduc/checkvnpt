@@ -5,8 +5,11 @@ import {Image, Platform, SafeAreaView, StatusBar, StyleSheet, Text, TouchableWit
 import QRCodeScanner from "react-native-qrcode-scanner";
 import {ScanRoute} from "../route";
 import NavigationService from "../service/NavigationService";
+import Alert from "../components/Alert";
+import {NavigationEvents} from "react-navigation";
 
 interface State {
+    showAlert?: boolean
 }
 
 interface Props {
@@ -16,17 +19,22 @@ interface Props {
 }
 
 export default class ScanQRScreen extends Component<Props, State> {
+    state = {
+        showAlert: false
+    }
     _onGoBack = () => {
         this.props.navigation.goBack();
     };
     private scanner: any;
+    private refAlert: any;
+    private refScanner: any;
 
     onSuccess(e: any) {
         if (e && e.data) {
             let url = e.data as string;
             if (!url.includes("vnptcheck.vn")) {
                 // todo need design
-                console.log('San pham k ton tai')
+                this.setState({showAlert: true})
             } else {
                 //ex : https://vnptcheck.vn/check/23174021902424
                 let splitter;
@@ -43,6 +51,7 @@ export default class ScanQRScreen extends Component<Props, State> {
 
         }
     }
+
     render() {
         let checkAndroidPermission = true
         if (Platform.OS === 'android' && Platform.Version < 23) {
@@ -50,6 +59,10 @@ export default class ScanQRScreen extends Component<Props, State> {
         }
         return (
             <SafeAreaView style={styles.container}>
+                <NavigationEvents onDidFocus={() => {
+                    this.refScanner.reactivate()
+                }
+                }/>
                 <StatusBar/>
                 <View style={[styles.toolbar, {backgroundColor: "#0368d0"}]}>
                     <TouchableWithoutFeedback onPress={this._onGoBack}>
@@ -65,12 +78,22 @@ export default class ScanQRScreen extends Component<Props, State> {
                     <Text style={[styles.titleToolbar]}>Scan QR code</Text>
                 </View>
                 <QRCodeScanner
-                    reactivate={true}
+                    ref={(ref: any) => {
+                        this.refScanner = ref
+                    }}
                     showMarker={true}
                     cameraProps={{captureAudio: false}}
                     checkAndroid6Permissions={checkAndroidPermission}
                     onRead={this.onSuccess.bind(this)}
                 />
+                <Alert ref={(ref: any) => this.refAlert = ref} show={this.state.showAlert} type={"normal"}
+                       title={'Thông báo'}
+                       onConfirmPressed={() => {
+                           this.refAlert._springHide()
+                           this.refScanner.reactivate()
+                       }}
+                       onClose={() => this.refScanner.reactivate()}
+                       message={'Sản phẩm không tồn tại'}/>
             </SafeAreaView>
         );
     }

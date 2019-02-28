@@ -74,6 +74,8 @@ interface Props {
     onSendVote?(numberStart: number): void
 
     onSendCodeVerify?(codeVerify: string): void
+
+    onClose?(): void
 }
 
 interface State {
@@ -156,6 +158,7 @@ export default class Alert extends Component<Props, State> {
     _handleHwBackEvent = () => {
         const {closeOnHardwareBackPress} = this.props;
         if (this.state.showSelf && closeOnHardwareBackPress) {
+            this.props.onClose && this.props.onClose()
             this._springHide();
         }
     };
@@ -163,6 +166,7 @@ export default class Alert extends Component<Props, State> {
     _onTapOutside = () => {
         const {closeOnTouchOutside} = this.props;
         if (closeOnTouchOutside) {
+            this.props.onClose && this.props.onClose()
             this._springHide()
         }
     };
@@ -250,6 +254,7 @@ export default class Alert extends Component<Props, State> {
                     text: config.text_button.ok,
                     buttonStyle: confirmButtonStyle,
                     onPress: onConfirmPressed,
+                    type
                 };
                 return (this._renderOneButton(confirmButtonData));
             }
