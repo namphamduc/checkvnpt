@@ -10,6 +10,7 @@ function* requestInfoItem() {
             try {
                 let urlgetItem = API_GET_ITEM_BY_CODE;
                 let urlgetCompany = API_GET_COMPANY_BY_CODE;
+                console.log('xxxxx '+ urlgetItem)
                 if (action.code) {
                     urlgetItem = urlgetItem.concat(action.code)
                     urlgetCompany = urlgetCompany.concat(action.code)

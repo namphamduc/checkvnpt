@@ -6,22 +6,39 @@ import {
     Image,
     SafeAreaView,
     StatusBar,
-    TouchableOpacity
+    TouchableOpacity, TouchableOpacityComponent
 } from "react-native";
 import {TextInput} from "react-native-gesture-handler";
 import {getInfoUser} from "../utils/AsyncStorage";
+import NavigationService from "../service/NavigationService";
+import {ScanRoute} from "../route";
+import Loading from "../components/Loading";
+import Alert from "../components/Alert";
 
 interface Props {
     navigation: any
+    loading: any
+    data: any
+    resultType: any,
+    code: any,
+    message: any
+
+    getInfoItem(code: string): void
 
     getInfoUser(token: any): void
 }
 
 interface State {
+    textSearch: string,
+    showAlert: boolean
 }
 
 export default class SCanSCreen extends Component<Props, State> {
-    state = {};
+    state = {
+        textSearch: '',
+        showAlert: false
+    };
+    private refAlert: any;
     // static navigationOptions = ({ navigation }) => {
     //   const { params = {} } = navigation.state;
     //   let tabBarIcon = () => (
@@ -38,6 +55,15 @@ export default class SCanSCreen extends Component<Props, State> {
                 this.props.getInfoUser(value.use_session)
             }
         })
+    }
+
+    componentWillReceiveProps(nextProps: any, nextContext: any): void {
+        const {resultType, data, message} = nextProps;
+        if (resultType == 'Success') {
+            this.gotoDetailItem(this.state.textSearch)
+        } else if (resultType == 'Failure') {
+            this.setState({showAlert: true})
+        }
     }
 
     _onPressQR = () => {
@@ -67,21 +93,32 @@ export default class SCanSCreen extends Component<Props, State> {
                     backgroundColor: "#0368d0"
                 }}>
                     <View style={[styles.searchView, {backgroundColor: "#0368d0"}]}>
-                        <Image
-                            style={{
-                                marginLeft: 10,
-                                width: 20,
-                                height: 20
-                            }}
-                            source={require("../images/ic_search.png")}
-                        />
+                        <TouchableOpacity onPress={() => {
+                            this.handleSearch()
+                        }}>
+                            <Image
+                                style={{
+                                    marginLeft: 10,
+                                    width: 20,
+                                    height: 20
+                                }}
+                                source={require("../images/ic_search.png")}
+                            />
+                        </TouchableOpacity>
+
                         <TextInput
+                            onSubmitEditing={() => this.handleSearch()}
+                            returnKeyType={"search"}
                             style={{
                                 height: 40,
                                 color: "white",
                                 paddingHorizontal: 10
                             }}
-                            placeholder="Tài khoản"
+                            value={this.state.textSearch}
+                            onChangeText={(text: any) => {
+                                this.setState({textSearch: text})
+                            }} keyboardType={'numeric'}
+                            placeholder="Truy vấn theo mã sản phẩm "
                             placeholderTextColor="white"
                             autoCorrect={false}
                         />
@@ -127,9 +164,32 @@ export default class SCanSCreen extends Component<Props, State> {
                         <Text style={styles.buttonText}>Quét QR</Text>
                     </TouchableOpacity>
                 </View>
-
+                <Alert ref={(ref: any) => this.refAlert = ref} show={this.state.showAlert} type={"normal"}
+                       title={'Thông báo'}
+                       onConfirmPressed={() => {
+                           this.setState({showAlert: false})
+                       }}
+                       message={'Sản phẩm không tồn tại'}/>
+                <Loading loading={this.props.loading} indicatorColor={'blue'}/>
             </SafeAreaView>
         );
+    }
+
+    handleSearch = () => {
+        console.log('xxxxxx')
+        let textSearch = this.state.textSearch;
+        this.props.getInfoItem(textSearch)
+    }
+    gotoDetailItem = (code: string) => {
+        let url = 'https://vnptcheck.vn/check/'
+        url = url.concat(code)
+        console.log(url)
+        NavigationService.navigate(ScanRoute.WEB_VIEW, {
+            WEB_VIEW_PARAMS: {
+                title: 'Thông tin sản phẩm',
+                url
+            }
+        })
     }
 }
 const styles = StyleSheet.create({

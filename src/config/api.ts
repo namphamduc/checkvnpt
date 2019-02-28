@@ -1,6 +1,6 @@
 import Config from 'react-native-config'
 
-export const BASE_URL = Config.API_URL;
+export const BASE_URL = 'https://vnptcheck.vn//check2_service_app/app';
 export const URL_LOGIN = 'https://vnptcheck.vn/check2_service_authen/bi/signin'
 export const URL_INFO_USER = 'https://vnptcheck.vn/check2_service_authen/bi/profile'
 //https://vnptcheck.vn//check2_service_app/app/getitembycode/23174021902424
