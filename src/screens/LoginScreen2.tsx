@@ -11,18 +11,16 @@ import {
     SafeAreaView,
     Keyboard,
     TouchableOpacity,
-    CheckBox,
     KeyboardAvoidingView
 } from "react-native";
-import CheckboxFormX from "react-native-checkbox-form";
 import Loading from "../components/Loading";
+import CheckBox from 'react-native-check-box'
 
-const mockData = [
-    {
+const mockData = {
         label: "Ghi nhớ tài khoản",
         RNchecked: true
     }
-];
+;
 
 interface Props {
     navigation: any
@@ -200,27 +198,22 @@ export default class LoginScreen2 extends Component<Props, State> {
                     <View style={styles.view2}/>
                     <View
                         style={{
-                            width: 150,
+                            width: 200,
                             height: 30,
                             alignSelf: "center",
-                            // justifyContent: "center",
-                            marginVertical: 10
                         }}
                     >
-                        <CheckboxFormX
-                            style={{width: 350 - 30}}
-                            textStyle={styles.checkboxText}
-                            dataSource={[{
-                                label: 'Ghi nhớ tài khoản',
-                                RNchecked: this.state.rememberMe
-                            }]}
-                            itemShowKey="label"
-                            itemCheckedKey="RNchecked"
-                            iconSize={16}
-                            iconColor="#FFF"
-                            formHorizontal={true}
-                            labelHorizontal={true}
-                            onChecked={(item: any) => this._onSelect(item)}
+                        <CheckBox
+                            checkBoxColor={'#FFFFFF'}
+                            style={{flex: 1, padding: 10}}
+                            onClick={() => {
+                                this.setState({
+                                    rememberMe: !this.state.rememberMe
+                                })
+                            }}
+                            rightTextStyle={{color: '#FFFFFF'}}
+                            isChecked={this.state.rememberMe}
+                            rightText={mockData.label}
                         />
                     </View>
                     <TouchableOpacity style={styles.buttonContainer} onPress={this._pressLogin}>

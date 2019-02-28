@@ -230,7 +230,7 @@ export default class MEnuSCreen extends Component<Props, State> {
             }
         } else {
             data = {
-                image: require("../images/ic_logout.png"),
+                image: require("../images/ic_signin.png"),
                 title: "Đăng nhập",
             }
         }
