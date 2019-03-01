@@ -58,9 +58,9 @@ export default class SCanSCreen extends Component<Props, State> {
     }
 
     componentWillReceiveProps(nextProps: any, nextContext: any): void {
-        const {resultType, data, message} = nextProps;
+        const {resultType, data, message,code} = nextProps;
         if (resultType == 'Success') {
-            this.gotoDetailItem(this.state.textSearch)
+            this.gotoDetailItem(code)
         } else if (resultType == 'Failure') {
             this.setState({showAlert: true})
         }
@@ -176,14 +176,12 @@ export default class SCanSCreen extends Component<Props, State> {
     }
 
     handleSearch = () => {
-        console.log('xxxxxx')
         let textSearch = this.state.textSearch;
         this.props.getInfoItem(textSearch)
     }
     gotoDetailItem = (code: string) => {
         let url = 'https://vnptcheck.vn/check/'
         url = url.concat(code)
-        console.log(url)
         NavigationService.navigate(ScanRoute.WEB_VIEW, {
             WEB_VIEW_PARAMS: {
                 title: 'Thông tin sản phẩm',

@@ -10,7 +10,6 @@ function* requestInfoItem() {
             try {
                 let urlgetItem = API_GET_ITEM_BY_CODE;
                 let urlgetCompany = API_GET_COMPANY_BY_CODE;
-                console.log('xxxxx '+ urlgetItem)
                 if (action.code) {
                     urlgetItem = urlgetItem.concat(action.code)
                     urlgetCompany = urlgetCompany.concat(action.code)
@@ -35,7 +34,8 @@ function* requestInfoItem() {
                 } as any
                 yield put({
                     type: GetInfoItemType.REQUEST_INFO_ITEM_SUCCESS,
-                    data: historyItem
+                    data: historyItem,
+                    code: action.code,
                 })
                 console.log('------------historyItem  ' + JSON.stringify(historyItem))
                 yield call(saveHistory, historyItem)
